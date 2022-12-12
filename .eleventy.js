@@ -14,7 +14,7 @@ console.log('pathPrefix is set to ...', pathPrefix);
 // see "eleventyConfig.addGlobalData("site", globalData);"" below
 // related: https://github.com/11ty/eleventy/issues/1641
 const globalSiteData = {
-  title: "11ty-plain-bootstrap5",
+  title: "Workshops van minor studenten Interface & User Experience Design",
   description: "Template for static site generator Eleventy with Boostrap 5 and SCSS/JS compilation via laravel-mix.",
   locale: 'en',
   baseUrl: baseUrl,
@@ -23,6 +23,7 @@ const globalSiteData = {
 
 // https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates
 const Image = require("@11ty/eleventy-img");
+const yaml = require("js-yaml");
 
 async function imageShortcode(src, alt, sizes = "100vw") {
   if (alt === undefined) {
@@ -65,7 +66,7 @@ module.exports = function (eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
+  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
   // Copy dist/ files from laravel mix
   eleventyConfig.addPassthroughCopy("dist/"); // path is relative from root
 
@@ -111,3 +112,6 @@ module.exports = function (eleventyConfig) {
     pathPrefix: pathPrefix
   };
 };
+
+
+
