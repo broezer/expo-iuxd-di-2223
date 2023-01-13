@@ -1,7 +1,7 @@
 {
-  "name": "11ty-plain-bootstrap5",
+  "name": "workshops-iuxd",
   "version": "0.0.1",
-  "description": "Plain simple template for 11ty/eleventy and bootstrap5.",
+  "description": "Overzicht van de workshops die de vierdejaars studenten van de minor Interface & User Experience Design.",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist",

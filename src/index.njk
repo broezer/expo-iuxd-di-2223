@@ -1,182 +1,177 @@
 ---
 meta:
   lang: en
-  title: 11ty-plain-bootstrap5
+  title: IUXD 22-23 Workshops
   image: "/assets/images/open-graph/teaser.jpeg"
-  description: Template for static site generator Eleventy with Boostrap 5 and SCSS/JS compilation via laravel-mix.
+  description: Overzicht van de workshops die de vierdejaars studenten van de minor Interface & User Experience Design.
 layout: base
 eleventyNavigation:
   key: Home
 ---
 
-<div class="p-5 mb-4 bg-light rounded-3">
-  <div class="container-fluid py-2">
-    <h1 class="display-5 fw-bold">{{ site.title }}</h1>
-    <p class="col-md-10 fs-4 mb-0 pt-2">
-      Get started with the simple and awesome static site generator Eleventy and Bootstrap 5. Hello
-      <!-- This template
-      contains Bootstrap (via npm), LaravelMix for compiling JS/SCSS and some small additions like eleventy-navigation.
-      Other than that - just plain Bootstrap 5 and Eleventy. --><br /><br />
+<div class=" p-3  mb-4 bg-light rounded-3">
+  <div class="container-fluid py-2 ">
+    <h1 class="display-3 fw-bold">Workshops minor studenten<br/> Interface & User Experience Design</h1>
+    <p class="col-md-10 fs-5 mb-0 pt-2">
+      Het afgelopen semester hebben vierdejaars studenten van de minor <em>Interface & User Experience Design</em>, tijdens het vak <em>Becoming a Digital Designer</em>, een onderwerp onderzocht binnen het vakgebied, waar zij meer over wilde leren als ontwerper. De kennis en vaardigheden die ze hebben opgedaan tijdens dit onderzoek hebben verwerkt in een Image Swiper. Daarnaast hadden ze nog een andere vorm waarin ze die kennis en vaardigheden hebben uitgedragen, dat kan bijvoorbeeld een podcast zijn, een website of een artikel. 
+Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De workshops zullen ongeveer een uur duren en zijn in middag van 20 december. Kijk naar wat jij interessant zou vinden en meld je aan voor de workshops via de aanmelder!
     </p>
-    <a class="btn btn-primary btn-lg mt-2" href="https://github.com/mandrasch/11ty-plain-bootstrap5">
-      See template on GitHub
+    <p class="col-md-10 fs-5 mb-0 pt-2">
+      <strong>- Coaches Becoming a Digital Designer</strong>
+    </p>
+
+    <div class="row pt-3">
+      {% for coach in coaches %}
+        <div style="width:130px" class="pb-5">
+          <div class="rounded-circle" style="height:90px; width:90px; background:red; background-size:cover; background-position:center center; background-image:url('assets/coaches/{{ coach.photo }}.jpg');">
+
+          </div>
+
+          <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ coach.name }}</span>
+          <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ coach.lastname }}</span>
+        </div>
+      {% endfor %}
+    </div>
+
+    <a class="btn btn-primary btn-lg mt-2" href="https://www.aanmelder.nl/139885">
+     
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
+        width="24"
+        height="24"
         fill="currentColor"
         class="bi bi-github"
-        viewBox="0 0 16 16"
+        viewBox="0 0 24 24"
       >
-        <path
-          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-        />
-      </svg>
+      
+      <path d="m11.25 6c.398 0 .75.352.75.75 0 .414-.336.75-.75.75-1.505 0-7.75 0-7.75 0v12h17v-8.75c0-.414.336-.75.75-.75s.75.336.75.75v9.25c0 .621-.522 1-1 1h-18c-.48 0-1-.379-1-1v-13c0-.481.38-1 1-1zm-2.011 6.526c-1.045 3.003-1.238 3.45-1.238 3.84 0 .441.385.626.627.626.272 0 1.108-.301 3.829-1.249zm.888-.889 3.22 3.22 8.408-8.4c.163-.163.245-.377.245-.592 0-.213-.082-.427-.245-.591-.58-.578-1.458-1.457-2.039-2.036-.163-.163-.377-.245-.591-.245-.213 0-.428.082-.592.245z" fill-rule="nonzero"/>
+    
+    </svg>
+
+    Meld je aan via de aanmelder
+
     </a>
-    <a
-      class="btn btn-outline-secondary text-black btn-lg mt-2"
-      href="https://gitpod.io/#https://github.com/mandrasch/11ty-plain-bootstrap5"
-      target="_blank"
-    >
-      Open in Gitpod
-      <svg viewBox="0 0 189 208" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M112.287 10.3584C117.9 20.2129 114.487 32.7666 104.664 38.3978L43.5862 73.41C41.9693 74.3369 40.972 76.0577 40.972 77.9209V132.899C40.972 134.763 41.9693 136.483 43.5862 137.41L91.9123 165.113C93.515 166.032 95.485 166.032 97.0877 165.113L145.414 137.41C147.031 136.483 148.028 134.763 148.028 132.899V98.7091L104.567 123.309C94.7131 128.886 82.2179 125.394 76.6581 115.509C71.0983 105.624 74.5793 93.0891 84.4331 87.5117L146.62 52.3128C165.563 41.591 189 55.321 189 77.1398V137.066C189 151.102 181.503 164.062 169.355 171.026L113.844 202.847C101.858 209.718 87.1424 209.718 75.1558 202.847L19.6453 171.026C7.49714 164.062 0 151.102 0 137.066V73.7544C0 59.7184 7.49714 46.7585 19.6453 39.7947L84.3361 2.71125C94.1595 -2.91993 106.673 0.503802 112.287 10.3584Z"
-          fill="url(#paint0_linear)"
-        />
-        <defs>
-          <linearGradient
-            id="paint0_linear"
-            x1="142.253"
-            y1="31.4537"
-            x2="44.8052"
-            y2="184.17"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#FFB45B" />
-            <stop offset="1" stop-color="#FF8A00" />
-          </linearGradient>
-        </defs>
-      </svg>
-    </a>
-    <p class="mt-4">
-      <small>Status: Always a bit "work in progress", but good to go.</small>
-    </p>
+    
   </div>
 </div>
 
 <div class="row align-items-md-stretch">
-  <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 text-white bg-dark rounded-3">
-      <h2>Lorem ipsum dolor sit</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua.
-      </p>
-      <a href="{{ 'pages/examples' | url }}" class="btn btn-outline-light">Examples</a>
-    </div>
-  </div>
-  <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 border rounded-3" style="background-color: #ff7979">
-      <h2>Sed diam nonumy</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      </p>
-      <a href="{{ 'pages/another_site ' | url }}" class="btn btn-outline-dark">Another site</a>
-    </div>
-  </div>
-  <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 border rounded-3" style="background-color: #f6e58d">
-      <h2>Consetetur sadipscing elitr</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-      </p>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-      </button>
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">...</div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+  {% for team in teams %}
+
+    <div class="flex-col col-md-4 mt-5">
+      <div class="h-100 p-3 text-dark bg-light rounded-3">
+        <h5>{{ team.name }}</h5>
+        <span style="height:8px; width:33%; display: block; background-color: #{{ team.color }}"></span>
+        {% if team.students %}
+          <div class="row align-items-center pt-3 ">
+          {% for student in team.students %}
+            <div style="width:130px" class="pb-5">
+              <div class="rounded-circle" style="height:90px; width:90px; background:red; background-size:cover; background-position:center center; background-image:url('assets/profiles/FC_DSC-{{ student.photo }}.jpg');">
+
+              </div>
+
+                <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
+                <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
+              </div>
+            {% endfor %}
           </div>
-        </div>
+          {% endif %}
+        
+        {% if team.embed %}
+          {{ team.embed | safe  }}
+        {% endif %}
+
+        {% if team.link %}
+          <div class="d-grid align-self-end">
+            <a class="btn btn-primary btn-lg mt-2" style="background-color: #{{ team.color }}; border:none" href="{{ team.link | url }}" rel=”noopener noreferrer” target=”_blank”>
+              {% if team.format == 'website' %}
+                 
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-github"
+                viewBox="0 0 24 24"
+              >
+              
+                <path d="m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-1.5 5.505v9.995h-15v-9.995zm0-1.5h-15v-3.505h15zm-2.3-2.527c.442 0 .8.359.8.8 0 .442-.358.8-.8.8s-.8-.358-.8-.8c0-.441.358-.8.8-.8zm-1.65.777c0-.397-.352-.75-.75-.75-1.695 0-6.355 0-8.05 0-.399 0-.75.353-.75.75s.351.75.75.75h8.05c.398 0 .75-.353.75-.75z" fill-rule="nonzero"/>
+              
+              </svg>
+
+                Bekijk onze one-pager!  
+
+              {% endif %}
+              {% if team.format == 'video' %}
+                
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-github"
+                viewBox="0 0 24 24"
+              >
+              
+                <path d="M10 20v-6l5 3-5 3zm14-15.625l-.008-.042-1.008-4.333-21.169 4.196c-1.054.209-1.815 1.134-1.815 2.207v14.597c0 1.657 1.343 3 3 3h18c1.656 0 3-1.343 3-3v-14h-12.734l12.734-2.625zm-3.89-2.618l2.396 1.604-2.994.595-2.398-1.605 2.996-.594zm-5.897 1.169l2.399 1.606-2.993.595-2.402-1.607 2.996-.594zm-5.905 1.171l2.403 1.608-2.993.595-2.406-1.61 2.996-.593zm2.538 3.903l-2.039 2h-3.054l2.039-2h3.054zm8.978 0h3.054l-2.038 2h-3.055l2.039-2zm-6.012 0h3.053l-2.039 2h-3.053l2.039-2zm8.188 4v8.75c0 .69-.56 1.25-1.25 1.25h-17.5c-.69 0-1.25-.56-1.25-1.25v-8.75h20z"/>
+
+              </svg>
+                Kijk naar onze video!
+
+              {% endif %}
+              {% if team.format == 'podcast' %}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-github"
+                  viewBox="0 0 24 24"
+                >
+                
+                <path d="M6.043 16.496l-1.482 1.505c-2.791-2.201-4.561-5.413-4.561-9.001s1.77-6.8 4.561-9l1.482 1.504c-2.326 1.835-3.804 4.512-3.804 7.496s1.478 5.661 3.804 7.496zm8.957-7.496c0-1.657-1.344-3-3-3s-3 1.343-3 3c0 1.304.838 2.403 2 2.816v12.184h2v-12.184c1.162-.413 2-1.512 2-2.816zm-8.282 0c0-1.791.887-3.397 2.282-4.498l-1.481-1.502c-1.86 1.467-3.04 3.608-3.04 6s1.18 4.533 3.04 6l1.481-1.502c-1.396-1.101-2.282-2.707-2.282-4.498zm12.721-9l-1.482 1.504c2.326 1.835 3.804 4.512 3.804 7.496s-1.478 5.661-3.804 7.496l1.482 1.505c2.791-2.201 4.561-5.413 4.561-9.001s-1.77-6.8-4.561-9zm-2.958 3l-1.481 1.502c1.396 1.101 2.282 2.707 2.282 4.498s-.886 3.397-2.282 4.498l1.481 1.502c1.86-1.467 3.04-3.608 3.04-6s-1.179-4.533-3.04-6z"/>
+                </svg>
+
+                Beluister onze podcast!
+              {% endif %}
+              {% if team.format == 'medium' %}
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-github"
+                viewBox="0 0 24 24"
+              >
+              
+              <path d="M11.362 2c4.156 0 2.638 6 2.638 6s6-1.65 6 2.457v11.543h-16v-20h7.362zm.827-2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614zm4.811 13h-3v-1h3v1zm0 2h-3v1h3v-1zm0 3h-10v1h10v-1zm-5-6h-5v4h5v-4z"/>
+
+              </svg>
+                Lees ons artikel op Medium!
+              {% endif %}
+            </a>
+          </div>
+        {% endif %}
       </div>
     </div>
-  </div>
-  <div class="col-md-6 mt-3">
-    <div class="h-100 p-5 rounded-3" style="background-color: #7ed6df">
-      <h2>Sustainable Web Design?</h2>
-      <p>
-        Finished with developing your site with 11ty? Great! If you're interested in developing sustainable web sites as
-        well, check out:
-      </p>
-      <a class="btn btn-outline-dark" href="https://sustainablewebdesign.org" target="_blank">
-        sustainablewebdesign.org
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-box-arrow-up-right"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-          />
-          <path
-            fill-rule="evenodd"
-            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-          />
-        </svg>
-      </a>
-    </div>
-  </div>
-</div>
+    
 
-<div class="row mt-3">
-  <div class="col-12">
-    <div class="img-fit-cover-container rounded-3 bg-light">
-      {% image "./src/assets/images/bergsee.jpeg", "View from top of a mountain onto a sea and another mountain in
-      austria." %}
-    </div>
-  </div>
-</div>
 
-<div>
-{% for team in teams %}
-    <h3>{{ team.name }}</h3>
-    {% if team.embed %}
-     {{ team.embed | safe  }}
-    {% endif %}
-{% endfor %}
-</div>
+      
 
-<div>
 
- 
+  {% endfor %}
+  
 
 </div>
+
+
 
 <div class="row">
   <div class="col-12 py-5 text-center">
-    See <a href="https://github.com/mandrasch/11ty-plain-bootstrap5/" target="_blank">11ty-plain-bootstrap5</a> on
-    GitHub for all information.
+    Theme based on <a href="https://github.com/mandrasch/11ty-plain-bootstrap5/" target="_blank">11ty-plain-bootstrap5</a>.
   </div>
 </div>
 

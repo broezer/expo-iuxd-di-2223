@@ -7,11 +7,11 @@
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ meta.title or site.title }}">
 <meta property="og:description" content="{{ meta.description or site.description }}">
-<meta property="og:url" content="{{ page.url | url | absoluteUrl(site.baseUrl) }}">
+<meta property="og:url" content="{{ page.url | url  }}">
 <meta property="og:locale" content="{{ site.local or meta.locale }}">
 
 {%- if meta.image -%}
-<meta property="og:image" content="{{ meta.image | url | absoluteUrl(site.baseUrl) }}">
+<meta property="og:image" content="{{ meta.image | url  }}">
 {%- endif -%}
 {# eo Open Graph #}
 
@@ -20,7 +20,7 @@
 <meta name="twitter:title" content="{{ title or meta.title }}">
 <meta name="twitter:description" content="{{ meta.description or site.description}}">
 {%- if meta.image -%}
-<meta property="twitter:image" content="{{ meta.image | url | absoluteUrl(site.baseUrl) }}">
+<meta property="twitter:image" content="{{ meta.image | url  }}">
 {%- endif -%}
 {# eo Twitter #}
 

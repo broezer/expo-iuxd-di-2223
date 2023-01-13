@@ -14,8 +14,8 @@ console.log('pathPrefix is set to ...', pathPrefix);
 // see "eleventyConfig.addGlobalData("site", globalData);"" below
 // related: https://github.com/11ty/eleventy/issues/1641
 const globalSiteData = {
-  title: "Workshops van minor studenten Interface & User Experience Design",
-  description: "Template for static site generator Eleventy with Boostrap 5 and SCSS/JS compilation via laravel-mix.",
+  title: "Workshops minor studenten Interface & User Experience Design",
+  description: "Overzicht van de workshops die de vierdejaars studenten van de minor Interface & User Experience Design.",
   locale: 'en',
   baseUrl: baseUrl,
   pathPrefix: pathPrefix,
