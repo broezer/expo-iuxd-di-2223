@@ -66,10 +66,32 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
       <div class="h-100 p-3 text-dark bg-light rounded-3">
         <div class="d-flex justify-content-between">
           <h2 class="fs-5 ">{{ team.name }}</h2>
-          {% if team.link %}
+          
+        </div>
+        <span style="height:8px; width:33%; display: block; background-color: #{{ team.color }}"></span>
+        {% if team.students %}
+          <div class="row align-items-center pt-3 ">
+          {% for student in team.students %}
+            <div style="width:130px" class="pb-5">
+              <div class="rounded-circle" style="height:90px; width:90px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles/FC_DSC-{{ student.photo }}.jpg');">
+
+              </div>
+
+                <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
+                <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
+              </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+        <h6>Client: {{ team.client }}</h6>
+        <h3 class="display-6 fs-6">{{team.brief}}</h3>
+        
+
+        {% if team.link %}
             
             <!--<a class="btn btn-primary btn-lg mt-2" style="background-color: #{{ team.color }}; border:none" href="{{ team.link | url }}" rel=”noopener noreferrer” target=”_blank”>-->
-              <a href="{{team.link}}" class="btn btn-outline-secondary">
+              <a href="{{team.link}}" class="btn btn-outline-dark mt-3 w-100">
               {% if team.format == 'website' %}
                   
                 <svg
@@ -91,27 +113,8 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
               {% endif %}
             </a>
             
-          {% endif %}
-        </div>
-        <span style="height:8px; width:33%; display: block; background-color: #{{ team.color }}"></span>
-        {% if team.students %}
-          <div class="row align-items-center pt-3 ">
-          {% for student in team.students %}
-            <div style="width:130px" class="pb-5">
-              <div class="rounded-circle" style="height:90px; width:90px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles/FC_DSC-{{ student.photo }}.jpg');">
+        {% endif %}
 
-              </div>
-
-                <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
-                <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
-              </div>
-            {% endfor %}
-          </div>
-          {% endif %}
-
-        <h6>Client: {{ team.client }}</h6>
-        <h3 class="display-6 fs-6">{{team.brief}}</h3>
-        
         <!-- 
         {% if team.embed %}
           {{ team.embed | safe  }}
@@ -220,9 +223,9 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
             </h2>
             <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body p-5" style="background: #F8F5EE">
+          <div class="modal-body p-4 p-md-5" style="background: #F8F5EE">
 
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between flex-column flex-md-row">
               <div class="pb-5 pe-3">
                 <div class="rounded-circle" style="height:250px; width:250px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');"></div>
                   <h1>
@@ -231,7 +234,8 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
                   </h1>
                   <span style="height:8px; width:33%; display: block; background-color: #{{ team.color }}"></span>
               </div>
-              <h2 class="display-4 fs-3 ps-5 pb-5 pt-1 align-self-center">
+              <!--<h2 class="display-4 fs-3 ps-5 pb-5 pt-1 align-self-center">-->
+              <h2 class="display-4 fs-3 col-12 col-md-8 pb-md-5 pt-1 align-self-center">
                 {{ student.hmw }}
               </h2>
                
