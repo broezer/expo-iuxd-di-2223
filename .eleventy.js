@@ -14,7 +14,7 @@ console.log('pathPrefix is set to ...', pathPrefix);
 // see "eleventyConfig.addGlobalData("site", globalData);"" below
 // related: https://github.com/11ty/eleventy/issues/1641
 const globalSiteData = {
-  title: "Expo 2022-2023 | Minor Interface & User Experience X Minor Designful Innovation | CMD Rotterdam | Rotterdam University of Applied Sciences",
+  title: "Expo 2022-2023 - Minor Interface & User Experience X Minor Designful Innovation - CMD Rotterdam - Rotterdam University of Applied Sciences",
   description: "Overview projects Minor Interface & User Experience and Minor Designful Innovation, CMD Rotterdam ",
   locale: 'en',
   baseUrl: baseUrl,
