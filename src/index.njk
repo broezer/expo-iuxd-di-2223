@@ -135,10 +135,30 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
   {% for student in students %}
     <div class="flex-col col-6  col-md-2 mt-5">
       <div class="h-100 p-3 text-dark bg-light rounded-3">
-        <div class="row align-items-center pt-3 ">
-          
+        <div class="row align-items-center pt-1">
+          {% if student.theme == 'Social Business' %}
+            <span class="ms-2 mb-4" style="height:8px; width:50%; display: block; background-color: #f0b82a"></span>
+          {% endif %}
+          {% if student.theme == 'New Reality Perspectives' %}
+            <span class="ms-2 mb-4" style="height:8px; width:50%; display: block; background-color: #ef4c30"></span>
+          {% endif %}
+          {% if student.theme == 'Smart City' %}
+            <span class="ms-2 mb-4" style="height:8px; width:50%; display: block; background-color: #30b0e5"></span>
+          {% endif %}
+          {% if student.theme == 'Work, Culture & Play' %}
+            <span class="ms-2 mb-4" style="height:8px; width:50%; display: block; background-color: #f68428"></span>
+          {% endif %}
+          {% if student.theme == 'Human +' %}
+            <span class="ms-2 mb-4" style="height:8px; width:50%; display: block; background-color: #9256a3"></span>
+          {% endif %}
+          {% if student.theme == 'Rebooting Nature' %}
+            <span class="ms-2 mb-4" style="height:8px; width:50%; display: block; background-color: #a6ce3d"></span>
+          {% endif %}
+
           <div style="width:130px" class="pb-5">
-            <div class="rounded-circle" style="height:90px; width:90px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');">
+           
+
+            <div class="rounded-circle pt-3" style="height:90px; width:90px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');">
 
             </div>
 
@@ -146,13 +166,11 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
               <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
           </div>
             
-            <a href="" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#{{ student.lastname | replace(" ", "_") |  replace("'", "") | lower}}">
             
-                View Innovation!  
-
-            
-            </a>
-          </div>
+        </div>
+        <a href="" class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#{{ student.lastname | replace(" ", "_") |  replace("'", "") | lower}}">  
+          View Innovation!  
+        </a>
       </div>
     </div>
 
@@ -161,36 +179,89 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
     <div class="modal modal-xl fade" id="{{ student.lastname | replace(" ", "_") | replace("'", "") | lower}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h2 class="modal-title fs-5" id="exampleModalLabel">Designful Innovation</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          {% if student.theme == 'Social Business' %}
+          <div class="modal-header" style="background-color: #f0b82a">
+          {% endif %}
+          {% if student.theme == 'New Reality Perspectives' %}
+          <div class="modal-header" style="background-color: #ef4c30">
+          {% endif %}
+          {% if student.theme == 'Smart City' %}
+          <div class="modal-header" style="background-color: #30b0e5">
+          {% endif %}
+          {% if student.theme == 'Work, Culture & Play' %}
+          <div class="modal-header" style="background-color: #f68428">
+          {% endif %}
+          {% if student.theme == 'Human +' %}
+          <div class="modal-header" style="background-color: #9256a3">
+          {% endif %}
+          {% if student.theme == 'Rebooting Nature' %}
+          <div class="modal-header" style="background-color: #a6ce3d">
+          {% endif %}
+          
+            <h2 class="modal-title fs-5 text-light" id="exampleModalLabel">Designful Innovation - 
+              {% if student.theme == 'Social Business' %}
+              Social Business
+              {% endif %}
+              {% if student.theme == 'New Reality Perspectives' %}
+              New Reality Perspectives
+              {% endif %}
+              {% if student.theme == 'Smart City' %}
+              Smart City
+              {% endif %}
+              {% if student.theme == 'Work, Culture & Play' %}
+              Work, Culture & Play
+              {% endif %}
+              {% if student.theme == 'Human +' %}
+              Human +
+              {% endif %}
+              {% if student.theme == 'Rebooting Nature' %}
+              Rebooting Nature
+              {% endif %}
+            </h2>
+            <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-5" style="background: #F8F5EE">
 
             <div class="d-flex justify-content-between">
-              <div class="pb-5">
-                <div class="rounded-circle" style="height:250px; width:250px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');">
-    
-                </div>
+              <div class="pb-5 pe-3">
+                <div class="rounded-circle" style="height:250px; width:250px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');"></div>
                   <h1>
                     <span style="background:white; transform:translateY(-1.975em); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
                     <span style="background:white; transform:translateY(-0.495em); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
                   </h1>
                   <span style="height:8px; width:33%; display: block; background-color: #{{ team.color }}"></span>
-                </div>
-                <h2 class="display-4 ps-5 pt-1">
-                  {{ student.hmw }}
-                </h2>
+              </div>
+              <h2 class="display-4 fs-3 ps-5 pb-5 pt-1 align-self-center">
+                {{ student.hmw }}
+              </h2>
                
             </div>
 
-            {% if student.booklet %}
-              <img class="w-100" src="assets/booklet-di/{{ student.booklet }}" />
-            {% endif %}
+              <p class="mt-4 lead">
+                {{ student.text | escape | nl2br}}
+              </p>
+              <img class="w-100 mt-4" src="assets/booklet-di/{{ student.name | replace(" ", "-") | lower}}.jpg" />
              
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          {% if student.theme == 'Social Business' %}
+          <div class="modal-footer" style="background-color: #f0b82a">
+          {% endif %}
+          {% if student.theme == 'New Reality Perspectives' %}
+          <div class="modal-footer" style="background-color: #ef4c30">
+          {% endif %}
+          {% if student.theme == 'Smart City' %}
+          <div class="modal-footer" style="background-color: #30b0e5">
+          {% endif %}
+          {% if student.theme == 'Work, Culture & Play' %}
+          <div class="modal-footer" style="background-color: #f68428">
+          {% endif %}
+          {% if student.theme == 'Human +' %}
+          <div class="modal-footer" style="background-color: #9256a3">
+          {% endif %}
+          {% if student.theme == 'Rebooting Nature' %}
+          <div class="modal-footer" style="background-color: #a6ce3d">
+          {% endif %}
+            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
