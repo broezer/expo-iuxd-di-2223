@@ -21,12 +21,19 @@ designful: |
   All the students exceeded their own expectations. We are going to miss the 2022- 2023 student group!
 ---
 
-<section class="d-flex py-2 mb-5 ">
-  <a href="#iuxd" class="btn me-5 btn-lg btn-outline-dark mt-3 w-50">Interface & User Experience Design</a>
-
-  <a href="#designful" class="btn ms5  btn-lg btn-outline-dark mt-3 w-50">Designful Innovation</a>
+<section class="row pt-2 mb-2 ">
+  <div class="col-md-6">
+    <a href="#iuxd" class="btn  btn-lg btn-outline-dark mt-3 w-100">Interface & User Experience Design</a>
+  </div>
+  <div class="col-md-6 ">
+    <a href="#designful" class="btn  btn-lg btn-outline-dark mt-3 w-100">Designful Innovation</a>
+  </div>
 </section>
 
+
+<section class="py-5 row">
+  <img src="assets/images/logo.svg" class="" alt="CMD Rotterdam"/>
+</section>
 
 <section  id="iuxd" class=" p-3  mb-4 bg-light rounded-3">
   <div class="container-fluid py-2 ">
@@ -231,7 +238,7 @@ designful: |
           <div class="modal-header" style="background-color: #a6ce3d">
           {% endif %}
           
-            <h2 class="modal-title fs-5 text-light" id="exampleModalLabel">Designful Innovation - 
+            <h2 class="modal-title fs-5 text-light" id="exampleModalLabel">
               {% if student.theme == 'Social Business' %}
               Social Business
               {% endif %}
@@ -295,6 +302,7 @@ designful: |
           {% if student.theme == 'Rebooting Nature' %}
           <div class="modal-footer" style="background-color: #a6ce3d">
           {% endif %}
+            <h3 class="modal-title fs-5 text-light">Designful Innovation</h3> 
             <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
@@ -311,6 +319,7 @@ designful: |
 <div class="row">
   <div class="col-12 py-5 text-center">
     Theme based on <a href="https://github.com/mandrasch/11ty-plain-bootstrap5/" target="_blank">11ty-plain-bootstrap5</a>.
+    Development & Design <a href="https://brucemoerdjiman.com" target="_blank">Bruce Moerdjiman</a>.
   </div>
 </div>
 
