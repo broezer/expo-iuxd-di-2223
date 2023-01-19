@@ -1,61 +1,60 @@
 ---
 meta:
   lang: en
-  title: IUXD 22-23 Workshops
+  title: Minor IUXD x Minor Design Innovation
   image: "/assets/images/open-graph/teaser.jpeg"
-  description: Overzicht van de workshops die de vierdejaars studenten van de minor Interface & User Experience Design.
+  description: Project overview minor Interface & User Experience Design and Designful Innovation.
 layout: base
 eleventyNavigation:
   key: Home
+designful: |
+  Take up the challenge to design a meaningful innovation for 1 billion people. In a transformative programme consisting of different thematical weeks on Trend Watching, Design Psychology, Creative User Research, Creative Concepting, Making and Prototyping, Business modelling and Exposition Design, students gained the knowledge and insights to change existing situations.
+  
+  From August 2022 until January 2023, students were challenged to take the next step from ‘problem solving design’ to ‘sense making design’ (Bannon, Kolko).
+
+  It was again a pleasure and honour to work with students from different universities of Applied Sciences in and outside the Netherlands. Students who showed a curious and open mindset.
+
+  The students designed innovations that over time could benefit a substantial part of the world. Students gained deep insights about users and relevant stakeholders. They defined and reframed problems, in order to generate solutions or alternative approaches that are more effective than those that already exist.
+
+  With a persistent and critical mindset all the students managed to be creative and to come up with great ideas and innovations.
+
+  All the students exceeded their own expectations. We are going to miss the 2022- 2023 student group!
 ---
 
-<!--
-<div class=" p-3  mb-4 bg-light rounded-3">
+<section class="d-flex py-2 mb-5 ">
+  <a href="#iuxd" class="btn me-5 btn-lg btn-outline-dark mt-3 w-50">Interface & User Experience Design</a>
+
+  <a href="#designful" class="btn ms5  btn-lg btn-outline-dark mt-3 w-50">Designful Innovation</a>
+</section>
+
+
+<section  id="iuxd" class=" p-3  mb-4 bg-light rounded-3">
   <div class="container-fluid py-2 ">
-    <h1 class="display-3 fw-bold">Workshops minor studenten<br/> Interface & User Experience Design</h1>
+    <h1 class="display-3 fw-bold">Interface & User Experience Design</h1>
+    <h2 class="display-6 fs-3">Creating interactive products and services</h2>
     <p class="col-md-10 fs-5 mb-0 pt-2">
-      Het afgelopen semester hebben vierdejaars studenten van de minor <em>Interface & User Experience Design</em>, tijdens het vak <em>Becoming a Digital Designer</em>, een onderwerp onderzocht binnen het vakgebied, waar zij meer over wilde leren als ontwerper. De kennis en vaardigheden die ze hebben opgedaan tijdens dit onderzoek hebben verwerkt in een Image Swiper. Daarnaast hadden ze nog een andere vorm waarin ze die kennis en vaardigheden hebben uitgedragen, dat kan bijvoorbeeld een podcast zijn, een website of een artikel. 
-Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De workshops zullen ongeveer een uur duren en zijn in middag van 20 december. Kijk naar wat jij interessant zou vinden en meld je aan voor de workshops via de aanmelder!
-    </p>
+      Het afgelopen semester hebben vierdejaars studenten van de minor <em>Interface & User Experience Design</em>, tijdens de minor, gewerkt aan verschillende projecten van opdrachtgevers.  Daar zijn verschillende ontwerpen uitgekomen waarbij de gebruikersbeleving van het product of dienst centraal staat. De projecten zijn allemaal te bekijken via de case-study van de teams. Veel plezier met het bekijken van de projecten!    </p>
     <p class="col-md-10 fs-5 mb-0 pt-2">
-      <strong>- Coaches Becoming a Digital Designer</strong>
+      <strong>- Team IUXD</strong>
     </p>
 
     <div class="row pt-3">
       {% for coach in coaches %}
         <div style="width:130px" class="pb-5">
-          <div class="rounded-circle" style="height:90px; width:90px; background:red; background-size:cover; background-position:center center; background-image:url('assets/coaches/{{ coach.photo }}.jpg');">
+          <div class="rounded-circle" style="height:110px; width:110px; background:lightgray; background-size:cover; background-position:center center; background-image:url('assets/coaches/{{ coach.photo }}.jpg');">
 
           </div>
 
-          <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ coach.name }}</span>
           <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ coach.lastname }}</span>
+          <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ coach.name }}</span>
+          
         </div>
       {% endfor %}
     </div>
-
-    <a class="btn btn-primary btn-lg mt-2" href="https://www.aanmelder.nl/139885">
-     
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        fill="currentColor"
-        class="bi bi-github"
-        viewBox="0 0 24 24"
-      >
-      
-      <path d="m11.25 6c.398 0 .75.352.75.75 0 .414-.336.75-.75.75-1.505 0-7.75 0-7.75 0v12h17v-8.75c0-.414.336-.75.75-.75s.75.336.75.75v9.25c0 .621-.522 1-1 1h-18c-.48 0-1-.379-1-1v-13c0-.481.38-1 1-1zm-2.011 6.526c-1.045 3.003-1.238 3.45-1.238 3.84 0 .441.385.626.627.626.272 0 1.108-.301 3.829-1.249zm.888-.889 3.22 3.22 8.408-8.4c.163-.163.245-.377.245-.592 0-.213-.082-.427-.245-.591-.58-.578-1.458-1.457-2.039-2.036-.163-.163-.377-.245-.591-.245-.213 0-.428.082-.592.245z" fill-rule="nonzero"/>
-    
-    </svg>
-
-    Meld je aan via de aanmelder
-
-    </a>
     
   </div>
-</div>
--->
+</section>
+
 
 
 <div class="row align-items-md-stretch">
@@ -73,12 +72,12 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
           <div class="row align-items-center pt-3 ">
           {% for student in team.students %}
             <div style="width:130px" class="pb-5">
-              <div class="rounded-circle" style="height:90px; width:90px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles/FC_DSC-{{ student.photo }}.jpg');">
+              <div class="rounded-circle" style="height:110px; width:110px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles/FC_DSC-{{ student.photo }}.jpg');">
 
               </div>
-
-                <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
                 <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
+                <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
+                
               </div>
             {% endfor %}
           </div>
@@ -133,6 +132,36 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
 
 </div>
 
+
+<section id="designful" class="mt-5 p-3  mb-4 bg-light rounded-3">
+  <div class="container-fluid py-2 ">
+    <h1 class="display-3 fw-bold">Designful Innovation</h1>
+    <h2 class="display-6 fs-3">Make an impact on one billion people</h2>
+    <p class="col-md-10 fs-5 mb-0 pt-2">
+      {{ designful | escape | nl2br}}   
+    </p>
+    <p class="col-md-10 fs-5 mb-0 pt-2">
+      <strong>- Team Designful Innovation</strong>
+    </p>
+
+    <div class="row pt-3">
+      {% for coach in di %}
+        <div style="width:130px" class="pb-5">
+          <div class="rounded-circle" style="height:110px; width:110px; background:lightgray; background-size:cover; background-position:center center; background-image:url('assets/coaches-di/{{ coach.photo }}.jpg');">
+
+          </div>
+
+          <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ coach.lastname }}</span>
+          <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ coach.name }}</span>
+          
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+</section>
+
+
 <div class="row align-items-md-stretch">
 
   {% for student in students %}
@@ -161,12 +190,13 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
           <div style="width:130px" class="pb-5">
            
 
-            <div class="rounded-circle pt-3" style="height:90px; width:90px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');">
+            <div class="rounded-circle pt-3" style="height:110px; width:110px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');">
 
             </div>
 
-              <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
-              <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
+            <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
+            <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
+            
           </div>
             
             

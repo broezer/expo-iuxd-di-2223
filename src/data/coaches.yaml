@@ -6,6 +6,11 @@
   photo: jantien
 
 -
+  name: Jasper
+  lastname: Schelling
+  photo: jasper
+
+-
   name: Isabella
   lastname: Voskuijl
   photo: isabella
@@ -14,6 +19,11 @@
   name: Ivar
   lastname: van den Broek
   photo: ivar
+
+-
+  name: Peter
+  lastname: van Waart
+  photo: peter
 
 -
   name: Antoine

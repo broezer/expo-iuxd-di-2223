@@ -29,7 +29,7 @@
 
 -
     name:  FOMO
-    color: FC573E
+    color: BAD477
     client: 'Hike One'
     brief: 'Hoe kunnen wij ervoor zorgen dat (beginnende) mountainbikers makkelijker aan het juiste vignet kunnen komen?'
     link: https://naomizijderveld.wixsite.com/vignet2go
@@ -88,7 +88,7 @@
 
 -
     name: KRONKLE
-    color: 100554
+    color: ee4e34
     client: 'Gemeente Rotterdam'
     brief: 'Hoe maken we Rotterdam als immersive stad in de metaverse aantrekkelijk voor jongeren met behulp van fysieke, digitale en sociale aspecten?'
     link: http://kronkle.nl
@@ -145,7 +145,7 @@
 
 -
     name: In Your Face Interface
-    color: F29DAC
+    color: 7365C4
     client: 'Hike One'
     brief: 'Hoe kunnen we door middel van AR, de wereldoriëntatielessen interactiever en persoonlijker maken, zodat kinderen tussen de 6 en 10 de lesstof langer onthouden?'
     link: https://inyourfaceinterface.nl/
@@ -195,7 +195,7 @@
 
 -
     name: The Right Whey
-    color: 222731
+    color: 5856D6
     client: 'Strakzat'
     brief: 'Hoe kunnen we het gehele proces rondom kilometerregistratie optimaliseren waardoor bedrijven minder tijd en geld kwijt zijn met deze taak?'
     link: https://ridetrack.timfeskens.nl/
