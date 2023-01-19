@@ -9,6 +9,7 @@ eleventyNavigation:
   key: Home
 ---
 
+<!--
 <div class=" p-3  mb-4 bg-light rounded-3">
   <div class="container-fluid py-2 ">
     <h1 class="display-3 fw-bold">Workshops minor studenten<br/> Interface & User Experience Design</h1>
@@ -54,20 +55,50 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
     
   </div>
 </div>
+-->
+
 
 <div class="row align-items-md-stretch">
 
   {% for team in teams %}
 
-    <div class="flex-col col-md-4 mt-5">
+    <div class="flex-col col-md-6 mt-5">
       <div class="h-100 p-3 text-dark bg-light rounded-3">
-        <h5>{{ team.name }}</h5>
+        <div class="d-flex justify-content-between">
+          <h2 class="fs-5 ">{{ team.name }}</h2>
+          {% if team.link %}
+            
+            <!--<a class="btn btn-primary btn-lg mt-2" style="background-color: #{{ team.color }}; border:none" href="{{ team.link | url }}" rel=”noopener noreferrer” target=”_blank”>-->
+              <a href="{{team.link}}" class="btn btn-outline-secondary">
+              {% if team.format == 'website' %}
+                  
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-github"
+                viewBox="0 0 24 22"
+                class="t-1"
+              >
+              
+                <path d="m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-1.5 5.505v9.995h-15v-9.995zm0-1.5h-15v-3.505h15zm-2.3-2.527c.442 0 .8.359.8.8 0 .442-.358.8-.8.8s-.8-.358-.8-.8c0-.441.358-.8.8-.8zm-1.65.777c0-.397-.352-.75-.75-.75-1.695 0-6.355 0-8.05 0-.399 0-.75.353-.75.75s.351.75.75.75h8.05c.398 0 .75-.353.75-.75z" fill-rule="nonzero"/>
+              
+              </svg>
+
+                Bezoek onze one-pager!  
+
+              {% endif %}
+            </a>
+            
+          {% endif %}
+        </div>
         <span style="height:8px; width:33%; display: block; background-color: #{{ team.color }}"></span>
         {% if team.students %}
           <div class="row align-items-center pt-3 ">
           {% for student in team.students %}
             <div style="width:130px" class="pb-5">
-              <div class="rounded-circle" style="height:90px; width:90px; background:red; background-size:cover; background-position:center center; background-image:url('assets/profiles/FC_DSC-{{ student.photo }}.jpg');">
+              <div class="rounded-circle" style="height:90px; width:90px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles/FC_DSC-{{ student.photo }}.jpg');">
 
               </div>
 
@@ -77,90 +108,93 @@ Ook zullen zij een workshop verzorgen voor de tweedejaars studenten van CMD. De 
             {% endfor %}
           </div>
           {% endif %}
+
+        <h6>Client: {{ team.client }}</h6>
+        <h3 class="display-6 fs-6">{{team.brief}}</h3>
         
+        <!-- 
         {% if team.embed %}
           {{ team.embed | safe  }}
         {% endif %}
-
-        {% if team.link %}
-          <div class="d-grid align-self-end">
-            <a class="btn btn-primary btn-lg mt-2" style="background-color: #{{ team.color }}; border:none" href="{{ team.link | url }}" rel=”noopener noreferrer” target=”_blank”>
-              {% if team.format == 'website' %}
-                 
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                class="bi bi-github"
-                viewBox="0 0 24 24"
-              >
-              
-                <path d="m21 4c0-.478-.379-1-1-1h-16c-.62 0-1 .519-1 1v16c0 .621.52 1 1 1h16c.478 0 1-.379 1-1zm-1.5 5.505v9.995h-15v-9.995zm0-1.5h-15v-3.505h15zm-2.3-2.527c.442 0 .8.359.8.8 0 .442-.358.8-.8.8s-.8-.358-.8-.8c0-.441.358-.8.8-.8zm-1.65.777c0-.397-.352-.75-.75-.75-1.695 0-6.355 0-8.05 0-.399 0-.75.353-.75.75s.351.75.75.75h8.05c.398 0 .75-.353.75-.75z" fill-rule="nonzero"/>
-              
-              </svg>
-
-                Bekijk onze one-pager!  
-
-              {% endif %}
-              {% if team.format == 'video' %}
-                
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                class="bi bi-github"
-                viewBox="0 0 24 24"
-              >
-              
-                <path d="M10 20v-6l5 3-5 3zm14-15.625l-.008-.042-1.008-4.333-21.169 4.196c-1.054.209-1.815 1.134-1.815 2.207v14.597c0 1.657 1.343 3 3 3h18c1.656 0 3-1.343 3-3v-14h-12.734l12.734-2.625zm-3.89-2.618l2.396 1.604-2.994.595-2.398-1.605 2.996-.594zm-5.897 1.169l2.399 1.606-2.993.595-2.402-1.607 2.996-.594zm-5.905 1.171l2.403 1.608-2.993.595-2.406-1.61 2.996-.593zm2.538 3.903l-2.039 2h-3.054l2.039-2h3.054zm8.978 0h3.054l-2.038 2h-3.055l2.039-2zm-6.012 0h3.053l-2.039 2h-3.053l2.039-2zm8.188 4v8.75c0 .69-.56 1.25-1.25 1.25h-17.5c-.69 0-1.25-.56-1.25-1.25v-8.75h20z"/>
-
-              </svg>
-                Kijk naar onze video!
-
-              {% endif %}
-              {% if team.format == 'podcast' %}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  class="bi bi-github"
-                  viewBox="0 0 24 24"
-                >
-                
-                <path d="M6.043 16.496l-1.482 1.505c-2.791-2.201-4.561-5.413-4.561-9.001s1.77-6.8 4.561-9l1.482 1.504c-2.326 1.835-3.804 4.512-3.804 7.496s1.478 5.661 3.804 7.496zm8.957-7.496c0-1.657-1.344-3-3-3s-3 1.343-3 3c0 1.304.838 2.403 2 2.816v12.184h2v-12.184c1.162-.413 2-1.512 2-2.816zm-8.282 0c0-1.791.887-3.397 2.282-4.498l-1.481-1.502c-1.86 1.467-3.04 3.608-3.04 6s1.18 4.533 3.04 6l1.481-1.502c-1.396-1.101-2.282-2.707-2.282-4.498zm12.721-9l-1.482 1.504c2.326 1.835 3.804 4.512 3.804 7.496s-1.478 5.661-3.804 7.496l1.482 1.505c2.791-2.201 4.561-5.413 4.561-9.001s-1.77-6.8-4.561-9zm-2.958 3l-1.481 1.502c1.396 1.101 2.282 2.707 2.282 4.498s-.886 3.397-2.282 4.498l1.481 1.502c1.86-1.467 3.04-3.608 3.04-6s-1.179-4.533-3.04-6z"/>
-                </svg>
-
-                Beluister onze podcast!
-              {% endif %}
-              {% if team.format == 'medium' %}
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                class="bi bi-github"
-                viewBox="0 0 24 24"
-              >
-              
-              <path d="M11.362 2c4.156 0 2.638 6 2.638 6s6-1.65 6 2.457v11.543h-16v-20h7.362zm.827-2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614zm4.811 13h-3v-1h3v1zm0 2h-3v1h3v-1zm0 3h-10v1h10v-1zm-5-6h-5v4h5v-4z"/>
-
-              </svg>
-                Lees ons artikel op Medium!
-              {% endif %}
-            </a>
-          </div>
-        {% endif %}
+        --> 
+        
+      
       </div>
     </div>
+
     
+    
+  {% endfor %}
+
+ 
+
+</div>
+
+<div class="row align-items-md-stretch">
+
+  {% for student in students %}
+    <div class="flex-col col-6  col-md-2 mt-5">
+      <div class="h-100 p-3 text-dark bg-light rounded-3">
+        <div class="row align-items-center pt-3 ">
+          
+          <div style="width:130px" class="pb-5">
+            <div class="rounded-circle" style="height:90px; width:90px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');">
+
+            </div>
+
+              <span style="background:white; transform:translateY(-30px); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
+              <span style="background:white; transform:translateY(-8px); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
+          </div>
+            
+            <a href="" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#{{ student.lastname | replace(" ", "_") |  replace("'", "") | lower}}">
+            
+                View Innovation!  
+
+            
+            </a>
+          </div>
+      </div>
+    </div>
 
 
-      
+    <!-- Modal -->
+    <div class="modal modal-xl fade" id="{{ student.lastname | replace(" ", "_") | replace("'", "") | lower}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="exampleModalLabel">Designful Innovation</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-5" style="background: #F8F5EE">
 
+            <div class="d-flex justify-content-between">
+              <div class="pb-5">
+                <div class="rounded-circle" style="height:250px; width:250px; background:lightgrey; background-size:cover; background-position:center center; background-image:url('assets/profiles-di/{{ student.photo }}.jpg');">
+    
+                </div>
+                  <h1>
+                    <span style="background:white; transform:translateY(-1.975em); position: absolute; padding:0.2em; font-weight:600">{{ student.name }}</span>
+                    <span style="background:white; transform:translateY(-0.495em); position: absolute; padding:0.2em; ">{{ student.lastname }}</span>
+                  </h1>
+                  <span style="height:8px; width:33%; display: block; background-color: #{{ team.color }}"></span>
+                </div>
+                <h2 class="display-4 ps-5 pt-1">
+                  {{ student.hmw }}
+                </h2>
+               
+            </div>
+
+            {% if student.booklet %}
+              <img class="w-100" src="assets/booklet-di/{{ student.booklet }}" />
+            {% endif %}
+             
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   {% endfor %}
   
